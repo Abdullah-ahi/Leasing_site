@@ -1,0 +1,250 @@
+$container_width: 1440px;
+
+.calculator {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  &_top {
+    font-family: 'Nekst-Black';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 54px;
+    line-height: 90%;
+    color: #111111;
+    width: 53%;
+  }
+}
+.calculations {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+   &_car_cost{
+     &_desc{
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: #575757;
+     }
+     &_value {
+      background: #F3F3F4;
+      border-radius: 16px;
+      height: 68px;
+      width: $container_width/3.3;
+      margin-top: 24px;
+      position: relative;
+      &_items {
+        width: 100%;
+        font-family: Nekst-Black;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 65px;
+        color: #575757;
+        display: flex;
+      }
+      &_item {
+        width: 90%;
+        padding: 0 24px;
+        box-sizing: border-box;
+      }
+     }
+   }
+   &_request_button {
+      background: #FF9514;
+      border-radius: 40px;
+      padding: 9px 53px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      font-family: Nekst-Black;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 27px;
+      line-height: 50px;
+      color: #FFFFFF;
+      text-decoration: none;
+      display: block;
+      align-self: flex-end;
+      margin-left: 24%;
+      transition: background .3s;
+      &:hover {
+        background: #111111;
+      }
+      &:active {
+        background: #575757;
+      }
+   }
+}
+.currency {
+  width: 10%;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+#car_cost {
+  width: 93%;
+  height: 1px;
+  position: absolute;
+  left: 10px;
+  cursor: ew-resize;
+}
+.initial_fee {
+  &_desc {
+    @extend .calculations_car_cost_desc;
+  }
+  &_value {
+    @extend .calculations_car_cost_value;
+    &_items {
+      @extend .calculations_car_cost_value_items;
+    }
+    &_item {
+      @extend .calculations_car_cost_value_item;
+      width: 87%;
+    }
+  }
+  &_percentage_value {
+    background: #EBEBEC;
+    border-radius: 16px;
+    padding: 0 13px;
+    height: 53px;
+    margin-right: 2%;
+    margin-top: 8px;
+    font-family: 'Nekst-Black';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 52px;
+    text-align: right;
+    color: #575757;
+
+  }
+}
+#initial_fee {
+  @extend #car_cost;
+}
+.lease_term {
+  &_desc {
+    @extend .initial_fee_desc;
+  }
+  &_value {
+    @extend .initial_fee_value;
+    &_items {
+      @extend .initial_fee_value_items;
+    }
+    &_item {
+      @extend .initial_fee_value_item;
+    }
+  }
+}
+.moths_count {
+  font-family: 'Nekst-Black';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  text-align: right;
+  color: #575757;
+  line-height: 64px;
+  padding-right: 24px;
+  box-sizing: border-box;
+  height: 67px;
+}
+#moths_count {
+  @extend #initial_fee;
+}
+.agreement_cost{
+  &_block {
+    margin-top: 50px;
+    display: flex;
+  }
+  &_desc {
+    @extend .lease_term_desc
+  }
+  &_value {
+    font-family: 'Nekst-Black';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 54px;
+    line-height: 90%;
+    color: #575757;
+    display: block;
+    margin-top: 8px;
+  }
+  &_payment_data {
+    display: flex;
+  }
+}
+.monthly_payment {
+  margin-left: 180px;
+  &_desc {
+    @extend .lease_term_desc;
+  }
+  &_value {
+    @extend .agreement_cost_value;
+  }
+}
+@media (max-width: 1024px) {
+  .agreement_cost_block {
+    flex-direction: column;
+  }
+  .calculations_request_button {
+    max-width: 326px;
+    margin-top: 44px;
+    margin-left: 0;
+    align-self: flex-start;
+  }
+  .calculator_top {
+    width: 100% !important;
+  }
+  .calculations {
+    flex-direction: column;
+  }
+  .calculations_car_cost_value, .initial_fee_value, .lease_term_value {
+    width: 100% !important;
+  }
+  .initial_fee, .lease_term {
+    &_value_item {
+      width: 92% !important;
+    }
+    &_percentage_value {
+      margin-right: 0 !important;
+    }
+  }
+}
+@media (max-width: 769px){
+  .monthly_payment {
+    margin-left: 85px;
+  }
+}
+@media(max-width: 322px){
+  .calculator {
+    margin-top: 64px;
+    &_top {
+      font-size: 34px;
+    }
+  }
+  .calculations_car_cost_value {
+    margin-top: 8px;
+    margin-bottom: 25px;
+  }
+  .agreement_cost {
+    &_payment_data {
+      flex-direction: column;
+    }
+    &_value {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+    &_block {
+      margin-top: 25px;
+    }
+  }
+  .monthly_payment {
+    margin-left: 0;
+  }
+  .agreement_cost_desc, .monthly_payment_desc {
+    font-size: 14px;
+  }
+  .calculations_request_button {
+    padding: 9px 34px;
+    font-size: 22px;
+  }
+}
