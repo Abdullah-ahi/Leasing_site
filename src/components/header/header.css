@@ -236,7 +236,6 @@ body {
             align-items: flex-start;
     padding: 64px 44px 44px 44px;
     border-radius: 32px 0 0 0;
-    border: 1px solid #000;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     -webkit-box-pack: justify;
@@ -246,6 +245,9 @@ body {
     right: -120%;
     -webkit-transition: right 0.5s;
     transition: right 0.5s;
+    box-shadow: -2px -1px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px -1px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px -1px 5px 0px rgba(0, 0, 0, 0.75);
   }
   .page_header_right_item {
     width: 100%;

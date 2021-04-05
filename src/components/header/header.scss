@@ -188,12 +188,14 @@ body {
     align-items: flex-start;
     padding: 64px 44px 44px 44px;
     border-radius: 32px 0 0 0;
-    border: 1px solid #000;
     box-sizing: border-box;
     justify-content: space-between;
     top: 0;
     right: -120%;
     transition: right 0.5s;
+    box-shadow: -2px -1px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px -1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px -1px 5px 0px rgba(0,0,0,0.75);
     &_item {
       width: 100%;
     }
