@@ -16,6 +16,8 @@ new Vue({
     openForm (e) {
       e.preventDefault()
       let openMenuButton = document.getElementById('mobile_menu_icon_input')
+      let openedDropdown = document.getElementById('dropdown_input')
+      openedDropdown.checked = false
       openMenuButton.checked = false
       this.formBlock.classList.add('visible_form')
     },

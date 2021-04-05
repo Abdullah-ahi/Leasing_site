@@ -44,7 +44,7 @@
           <span class="monthly_payment_value">114 455 &#x20bd;</span>
         </div>
       </div>
-      <a @click="openForm" href="#" class="calculations_request_button">Оставить заявку</a>
+      <a @click="openForm" href="#" class="calculations_request_button" target="blank">Оставить заявку</a>
     </div>
   </section>
 </template>

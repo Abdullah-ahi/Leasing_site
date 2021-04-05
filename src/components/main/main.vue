@@ -4,7 +4,7 @@
       <div class="car_photo_left">
         <span class="car_photo_left_main_text">Авто в лизинг для физических лиц</span>
         <span class="car_photo_left_second_text">Получите машину за 5 дней</span>
-        <a @click="openForm" class="make_request_button car_photo_left_request_btn" href="#">Оставить заявку</a>
+        <a @click="openForm" class="make_request_button car_photo_left_request_btn" href="#" target="blank">Оставить заявку</a>
       </div>
       <div class="car_photo_right">
         <img src="../../images/first_car.jpg" class="car_photo_right_image prev_image" alt="car_photo">

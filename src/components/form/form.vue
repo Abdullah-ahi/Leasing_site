@@ -11,7 +11,7 @@
       <a @click="cancelUpdate" class="make_request_button car_photo_left_request_btn mobile_form_request_button" href="#">Оставить заявку</a>
       <div class="cookies_block">
         <div class="cookies_block_text">Нажимая на кнопку «Оставить заявку»,  я даю согласие на <span class="selected_text">обработку персональных данных</span></div>
-        <a @click="cancelUpdate" class="make_request_button car_photo_left_request_btn form_request_btn" href="#">Оставить заявку</a>
+        <a @click="cancelUpdate" class="make_request_button car_photo_left_request_btn form_request_btn" href="#" target="blank">Оставить заявку</a>
       </div>
       <div class="icons_block">
         <a @click="cancelUpdate" href="#" class="icons_block_item"></a>

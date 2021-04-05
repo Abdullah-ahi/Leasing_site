@@ -20,7 +20,7 @@
         <a class="page_header_right_item" href="#">Каталог</a>
         <a class="page_header_right_item" href="#">О нас</a>
       </nav>
-      <a @click="openForm" class="page_header_right_item make_request_button open_form" href="#">Оставить заявку</a>
+      <a @click="openForm" class="page_header_right_item make_request_button open_form" href="#" target="blank">Оставить заявку</a>
     </div>
   </header>
 </template>

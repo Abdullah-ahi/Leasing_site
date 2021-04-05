@@ -118,6 +118,15 @@
         transform: scale(1.5);
         filter: brightness(1);
         border-width: 1px;
+        border-color: #000;
+        &:last-child {
+          border-right-color: #fff;
+          border-top-color: #fff;
+        }
+        &:first-child {
+          border-left-color: #fff;
+          border-top-color: #fff;
+        }
       }
       &:active {
         opacity: 0.7;
@@ -244,5 +253,13 @@
   .pagination {
     left: 40%;
     bottom: -226px;
+  }
+}
+@media (max-width: 568px) and (max-height: 320px){
+  .car_photo_left {
+    padding-left: 30px;
+    &_main_text {
+      font-size: 34px;
+    }
   }
 }
